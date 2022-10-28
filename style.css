@@ -6,12 +6,15 @@ img {
     margin: 20px auto;
 }
 select {
-    display: block;
     margin: 30px 70px;
     padding: 5px;
     border: 2px solid rgb(115, 115, 222);
     border-radius: 5px;
     color: rgb(115, 115, 222);
+}
+
+#filter {
+    margin: 30px 10px 30px 70px !important;
 }
 
 input,
@@ -38,7 +41,16 @@ input:focus {
     border: 2px solid rgb(64, 64, 201);
 }
 
+input::placeholder {
+    color: rgb(115, 115, 222);
+    padding-left: 5px;
+}
+
 .card:hover {
     background-color: rgb(245, 238, 255);
     transition: 1s;
+}
+
+.filterBtn {
+    width: 150px;
 }
