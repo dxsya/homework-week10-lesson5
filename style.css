@@ -14,7 +14,7 @@ select {
 }
 
 #filter {
-    margin: 30px 10px 30px 70px !important;
+    margin: 30px 10px 30px 140px !important;
 }
 
 input,
@@ -53,4 +53,9 @@ input::placeholder {
 
 .filterBtn {
     width: 150px;
+}
+
+.inpBtn {
+    display: flex;
+    background-color: black;
 }
