@@ -39,7 +39,7 @@ let db = [
 
 let container = document.querySelector(".container");
 let div = document.createElement("div");
-div.classList.add("row", "row-cols-1", "row-cols-md-3", "g-4");
+div.classList.add("row", "row-cols-1", "row-cols-md-5", "g-4");
 function render(arr = db) {
     div.innerHTML = "";
     arr.forEach((item) => {
@@ -99,11 +99,5 @@ button.addEventListener("click", (e) => {
             return false;
         }
     });
-    if (filtered.length == 0) {
-        let h2 = document.createElement("h2");
-        h2.innerHTML = "there is no such item";
-        container.append(h2);
-    }
-
     render(filtered);
 });

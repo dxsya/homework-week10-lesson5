@@ -1,6 +1,6 @@
 img {
-    width: 250px;
-    height: 350px;
+    width: 150px;
+    height: 200px;
 }
 .container {
     margin: 20px auto;
@@ -9,8 +9,36 @@ select {
     display: block;
     margin: 30px 70px;
     padding: 5px;
+    border: 2px solid rgb(115, 115, 222);
+    border-radius: 5px;
+    color: rgb(115, 115, 222);
 }
 
-input {
-    margin: 0 30px 30px 70px;
+input,
+button {
+    margin: 0 10px 30px 70px;
+    padding: 3px;
+    color: rgb(64, 64, 201);
+    border: 2px solid rgb(115, 115, 222);
+    border-radius: 5px;
+}
+
+button {
+    margin: 0;
+    color: rgb(115, 115, 222);
+    width: 100px;
+}
+
+button:hover {
+    background-color: rgb(83, 83, 230);
+    color: white;
+}
+
+input:focus {
+    border: 2px solid rgb(64, 64, 201);
+}
+
+.card:hover {
+    background-color: rgb(245, 238, 255);
+    transition: 1s;
 }
