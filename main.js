@@ -90,8 +90,7 @@ select.addEventListener("change", (e) => {
 let input = document.querySelector("#search");
 let button = document.querySelector(".searchBtn");
 
-button.addEventListener("click", (e) => {
-    console.log(input.value);
+button.addEventListener("click", () => {
     let filtered = db.filter((item) => {
         if (item.title.toLowerCase().indexOf(input.value.toLowerCase()) != -1) {
             return true;
@@ -100,4 +99,17 @@ button.addEventListener("click", (e) => {
         }
     });
     render(filtered);
+});
+
+let filterBtn = document.querySelector(".filterBtn");
+let filterSelect = document.querySelector("#filter");
+filterBtn.addEventListener("click", () => {
+    if (filterSelect.value == "byPrice") {
+        let byPrice = db.sort((a, b) => a.price - b.price);
+        render(byPrice);
+    }
+    if (filterSelect.value == "byA") {
+        let byA = db.sort((a, b) => a.title.localeCompare(b.title));
+        render(byA);
+    }
 });
